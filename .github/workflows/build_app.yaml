@@ -21,7 +21,7 @@ jobs:
   - name: construir imagem docker
     run: docker build -t Lucas-Cardoso-Gomes/SigaaChat-2.0 .
   - name: login Dockerhub
-    run: docker login -u ${{secrets.DK_USER}} -p '${{secrets.DK_PASS}}'
+    run: docker login -u ${{secrets.DK_USER}} -p ${{secrets.DK_PASS}}
   - name: Envio da imagem
     run: docker push Lucas-Cardoso-Gomes/SigaaChat-2.0
   - name: copia script de ambiente
